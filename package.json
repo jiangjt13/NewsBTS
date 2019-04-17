@@ -1,0 +1,14 @@
+{
+  "name": "newsbts",
+  "version": "0.1.0",
+  "main": "app.js",
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.1.1"
+  },
+  "scripts": {
+    "package": "electron-packager ./ NewsBTS --out ./OutApp --electron-version=4.1.4 --overwrite"
+  }
+}

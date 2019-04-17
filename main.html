@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/newsbts.css">
+    <script src="js/browser.js"></script>
+    <script type="text/javascript" src="js/getnews.js"></script>
+    <style type="text/css">
+        .list-group {
+            max-height: 95%;
+            margin-bottom: 10px;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+
+<body style="overflow: hidden! important">
+    <div id="controls">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" onclick=changesourceclicked(this) href="#">instiz</a>
+            <a class="flex-sm-fill text-sm-center nav-link" onclick=changesourceclicked(this) href="#">pann</a>
+            <a class="flex-sm-fill text-sm-center nav-link" onclick=changesourceclicked(this) href="#">theqoo</a>
+        </nav>
+        <div id="title-list-instiz" class="list-group">
+        </div>
+        <div id="title-list-pann" class="list-group" style="display:none">
+        </div>
+        <div id="title-list-theqoo" class="list-group" style="display:none">
+        </div>
+    </div>
+    <webview style="width:640px; height:480px"></webview>
+    <div id="sad-webview">
+        <div id="sad-webview-icon">&#9762;</div>
+        <h2 id="crashed-label">Aw, Snap!</h2>
+        <h2 id="killed-label">He's Dead, Jim!</h2>
+        <p>Something went wrong while displaying this webpage.
+            To continue, reload or go to another page.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
