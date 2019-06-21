@@ -7,25 +7,45 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/newsbts.css">
-    <script src="js/browser.js"></script>
+    <script type="text/javascript" src="js/browser.js"></script>
     <script type="text/javascript" src="js/getnews.js"></script>
     <style type="text/css">
         .list-group {
-            max-height: 95%;
-            margin-bottom: 10px;
+            max-height: 100%;
+            margin-bottom: 5px;
             overflow: scroll;
             -webkit-overflow-scrolling: touch;
+            margin-top: 56px;
         }
     </style>
 </head>
 
 <body style="overflow: hidden! important">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" onclick="refresh()" href="#">Refresh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" onclick=changesourceclicked(this) href="#">instiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick=changesourceclicked(this) href="#">pann</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick=changesourceclicked(this) href="#">theqoo</a>
+                </li>
+            </ul>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="search_box" placeholder="">
+            </div>
+        </div>
+    </nav>
     <div id="controls">
-        <nav class="nav nav-pills flex-column flex-sm-row">
-            <a class="flex-sm-fill text-sm-center nav-link active" onclick=changesourceclicked(this) href="#">instiz</a>
-            <a class="flex-sm-fill text-sm-center nav-link" onclick=changesourceclicked(this) href="#">pann</a>
-            <a class="flex-sm-fill text-sm-center nav-link" onclick=changesourceclicked(this) href="#">theqoo</a>
-        </nav>
         <div id="title-list-instiz" class="list-group">
         </div>
         <div id="title-list-pann" class="list-group" style="display:none">
@@ -33,7 +53,8 @@
         <div id="title-list-theqoo" class="list-group" style="display:none">
         </div>
     </div>
-    <webview style="width:640px; height:480px"></webview>
+    <webview src="https://tmirun.github.io/blog/Electron-%E9%BB%98%E8%AE%A4%E8%8F%9C%E5%8D%95/"
+        ,style="width:640px; height:480px"></webview>
     <div id="sad-webview">
         <div id="sad-webview-icon">&#9762;</div>
         <h2 id="crashed-label">Aw, Snap!</h2>

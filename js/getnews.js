@@ -137,12 +137,6 @@ function initializetitle() {
         observer.observe(target, config);
     });
     
-    
-
-
-   
-
-
     //初始化pann目录下的标题
     var pannurls = ["https://pann.nate.com/talk/ranking",
         "https://pann.nate.com/talk/ranking?rankingType=total&page=2",
@@ -156,9 +150,15 @@ function initializetitle() {
 
     //初始化theqoo目录下的标题
     var baseurl = "https://theqoo.net/index.php?mid=hot&page=";
-    for (let page = 1; page < 5; page++) {
+    for (let page = 1; page < 6; page++) {
         createhttprequest(baseurl + page);
     }
+}
+function refresh(){
+    document.getElementById("title-list-pann").innerHTML=null;
+    document.getElementById("title-list-instiz").innerHTML=null;
+    document.getElementById("title-list-theqoo").innerHTML=null;
+    initializetitle()
 }
 
 initializetitle();
